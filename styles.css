@@ -1,0 +1,94 @@
+ /* Basic page styling */
+ body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Theme classes */
+body.light {
+    background-color: #f0f0f0;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.blue {
+    background-color: #e6f2ff;
+}
+
+/* Box that we'll animate */
+.box {
+    width: 150px;
+    height: 150px;
+    background-color: #042b6a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Makes the box slightly bigger when hovered */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Pulse animation definition */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Class that applies the pulse animation */
+.pulse {
+    animation: pulse 1s infinite;
+    background-color: #ea4335;
+}
+
+/* Bounce animation definition */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Class that applies the bounce animation */
+.bounce {
+    animation: bounce 0.5s;
+}
+
+/* Spin animation definition */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Class that applies the spin animation */
+.spin {
+    animation: spin 2s linear infinite;
+}
+
+/* Basic button styling */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #560463;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a01a2;
+}
